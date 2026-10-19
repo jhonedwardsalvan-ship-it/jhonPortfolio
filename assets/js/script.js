@@ -200,6 +200,105 @@ function renderSkills() {
    ============================================================ */
 var projectsData = [
     {
+        id: 'playvault',
+        image: './assets/image/project-image/playvault.jpg',
+        url: 'https://playvault.paycoinect.com',
+        liveLinks: [
+            { label: 'BetWinU',       url: 'https://betwinu.com' },
+            { label: 'Winfinitee',    url: 'https://winfinitee.com' },
+            { label: 'FastWin888',    url: 'https://fastwin888.com' },
+            { label: 'Jackpot Panalo', url: 'https://jackpotpanalo.com' },
+            { label: 'Lucky GDC888',  url: 'https://luckygdc888.com' },
+            { label: 'PanaloHub',     url: 'https://panalohub.com' },
+            { label: 'TodoSwerte',    url: 'https://todoswerte.com' },
+        ],
+        title: 'PlayVault — Multi-Brand Gaming Platform',
+        role: 'Full-Stack Developer',
+        shortDesc: 'One monorepo powering an operator portal, a shared Node API, 13 in-house games, and 7 live casino brands — with wallet sync to PayCoinect and SwiftPay payouts.',
+        objective: 'PlayVault is a multi-tenant gaming platform where a single Node 24 backend, queue workers, and Socket.IO layer serve an operator portal and seven independently deployed casino brands. It hosts in-house games (sabong, color game, e-jueteng, lotto, racing and more), aggregates third-party providers, and keeps player wallets in sync with the PayCoinect payment ecosystem.',
+        responsibilities: [
+            'Integrated SwiftPay as a payment vendor, with staging and production environments',
+            'Built merchant balance sync from the payment middleware, with a configurable wallet source on the portal',
+            'Added player reconciliation and report/rates improvements to the operator portal',
+            'Fixed PayCoinect ↔ PlayVault wallet sync and account-linking edge cases',
+            'Hardened in-house games: negative-bet prevention, m-sabong SSE and balance fixes, session preservation for Pinoy games',
+            'Shipped site features across brands — referral tab, music/language settings, marketplace fees, and "coming soon" game states',
+        ],
+        techstack: ['Node.js', 'React', 'TypeScript', 'Socket.IO', 'MongoDB', 'Redis / BullMQ', 'Payment APIs', 'GitHub Actions'],
+        wide: false,
+    },
+    {
+        id: 'paycoinect',
+        image: './assets/image/project-image/paycoinect-app.jpg',
+        url: 'https://paycoinect.com',
+        appStoreUrl: 'https://apps.apple.com/us/app/paycoinect/id6809365182',
+        playStoreUrl: 'https://play.google.com/store/apps/details?id=com.michaelbrother.paycoinect',
+        isMobileApp: true,
+        title: 'PayCoinect — Digital Wallet & Payments',
+        role: 'Full-Stack Developer',
+        shortDesc: 'Consumer wallet and super-admin platform across web and Flutter mobile, connecting players, merchants, and businesses to one source-of-truth wallet.',
+        objective: 'PayCoinect is a payments ecosystem: a public web portal, a Flutter mobile app, and a super-admin console on a Node/Express + MongoDB backend. It moves money between consumer wallets, merchants, and PayCoinect Business accounts, and serves as the wallet provider for the PlayVault gaming network.',
+        responsibilities: [
+            'Implemented send-money from PayCoinect to PayCoinect Business accounts',
+            'Re-architected wallet sync to a single source of truth, replacing webhooks with a direct API',
+            'Built super-admin business account screens — overview, directory, account controls, and merchant module assignment',
+            'Added module price markup to the monthly billing job and signup discounts',
+            'Wrote migrations for restaurant submodules, payroll, service charge, and Service Incentive Leave',
+        ],
+        techstack: ['Node.js', 'Express', 'TypeScript', 'MongoDB', 'React', 'Flutter'],
+        wide: false,
+    },
+    {
+        id: 'paycoinect-business',
+        image: './assets/image/project-image/paycoinect-business.jpg',
+        url: 'https://biz.paycoinect.com',
+        title: 'PayCoinect Business — Payroll, POS & Restaurant',
+        role: 'Full-Stack Developer',
+        shortDesc: 'Merchant back-office with PH-compliant payroll, sales & inventory, and restaurant kitchen flows, all funded from the PayCoinect wallet.',
+        objective: 'PayCoinect Business gives merchants one back-office for running their company: employee payroll with Philippine statutory compliance, sales and inventory, restaurant ordering and kitchen screens, and billing — on a MERN stack shared with the PayCoinect POS app.',
+        responsibilities: [
+            'Built the payroll module from scratch: SSS, PhilHealth, Pag-IBIG and withholding tax, payslip generation, and summary reporting APIs',
+            'Implemented a PH statutory rule registry, effective-dated regional wage orders, and BIR Form 2316 export',
+            'Added service-charge distribution, Service Incentive Leave accrual/encashment, and payroll adjustments',
+            'Delivered restaurant kitchen pages, counter-paid takeout, warranty tracking, and failed-delivery handling',
+            'Created guided product tours and polished registration, OTP login, and sidebar UX',
+        ],
+        techstack: ['Node.js', 'Express', 'TypeScript', 'MongoDB', 'React', 'Vite'],
+        wide: false,
+    },
+    {
+        id: 'middleware',
+        image: './assets/image/project-image/middleware.jpg',
+        url: 'https://prod-middleware.paycoinect.com',
+        title: 'PayCoinect Middleware v2 — Payment Gateway Hub',
+        role: 'Full-Stack Developer',
+        shortDesc: 'Payment middleware routing merchant cash-in, cash-out, and QR traffic across 12+ providers — HitPay, Stripe, PayMongo, SwiftPay, Wise, PayPal and more.',
+        objective: 'The payment hub behind the PayCoinect ecosystem and PlayVault: one API that merchants integrate once, which then routes each transaction to the right provider rail by service and currency. Version 2 is a TypeScript rewrite that runs side by side with v1 on the same database, with a React admin for vendors, merchants, rates, and service docs, secured by JWT and optional TOTP 2FA.',
+        responsibilities: [
+            'Added a max-ceiling toggle to the admin rates page, with amount-band unit tests',
+            'Fixed the blank service-docs page in the admin and covered the docs endpoint with integration tests',
+            'Shipped the rate hotfix through the staging → production pipeline (lint, typecheck, coverage gate, PM2 health-checked deploy)',
+        ],
+        techstack: ['Node.js', 'TypeScript', 'Express', 'MongoDB', 'Redis / BullMQ', 'React', 'Socket.IO', 'Payment APIs'],
+        wide: false,
+    },
+    {
+        id: 'praxys',
+        image: './assets/image/project-image/praxys.jpg',
+        url: 'https://praxyshq.com',
+        title: 'PRAXYS Technologies — Corporate Website',
+        role: 'Full-Stack Developer',
+        shortDesc: 'Corporate site for a US technology partner, with a MongoDB-backed inquiry and booking API and an 80% test-coverage CI gate.',
+        objective: 'The public website for Praxys Technologies LLC: a React + Vite frontend for services, careers, and contact pages, backed by a Node API that stores inquiries in MongoDB and sends SMTP notifications. Every merge must pass an 80% Vitest coverage gate in GitHub Actions.',
+        responsibilities: [
+            'Split booking email notifications from general inquiries',
+            'Added white-label file attachments to inquiry submissions',
+            'Built loading states for form submission buttons',
+        ],
+        techstack: ['React', 'Vite', 'Node.js', 'MongoDB', 'Vitest', 'GitHub Actions'],
+        wide: false,
+    },
+    {
         id: 'hris',
         image: './assets/image/project-image/hris-laptop.png',
         url: 'https://hris.lucky8star.com',
@@ -296,9 +395,8 @@ var projectsData = [
     },
     {
         id: 'betwinu',
-        image: null,
+        image: './assets/image/project-image/betwinu.jpg',
         url: 'https://www.betwinu.com/',
-        gradient: 'linear-gradient(135deg, #0d2137 0%, #1b3a6b 55%, #2563eb 100%)',
         title: 'BetWinU — International Casino Platform',
         role: 'Full-Stack Developer',
         shortDesc: 'Premium cross-border casino with multi-currency gateways spanning Philippines, Thailand, Vietnam & Malaysia markets.',
@@ -316,12 +414,11 @@ var projectsData = [
     },
     {
         id: 'zigzag',
-        image: null,
+        image: './assets/image/project-image/zigzag.jpg',
         url: null,
         appStoreUrl: 'https://apps.apple.com/us/app/zig-zag-live/id6755465986',
         playStoreUrl: 'https://play.google.com/store/apps/details?id=com.zigzaglive.app',
         isMobileApp: true,
-        gradient: 'linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #a855f7 100%)',
         title: 'ZigZag Live — Social Live Streaming App',
         role: 'Full-Stack Developer',
         shortDesc: 'Live streaming platform for iOS & Android — empowering creators to earn through real-time gifting, live battles, and a smart discovery engine.',
@@ -335,7 +432,7 @@ var projectsData = [
             'Ensured sub-second latency performance under concurrent live stream load with robust fault handling',
         ],
         techstack: ['Mobile Development', 'React Native','Augmented Reality','Real-Time Streaming', 'In-App Purchases', 'iOS', 'Android'],
-        wide: true,
+        wide: false,
     },
 ];
 
@@ -446,6 +543,19 @@ function openDrawer(id) {
             + '</div>';
     }
 
+    var sitesHtml = '';
+    if (p.liveLinks) {
+        sitesHtml = '<div class="drawer-section">'
+            + '<h4 class="drawer-section-title"><i class="fa-solid fa-globe"></i> Live Sites</h4>'
+            + '<div class="drawer-store-links">'
+            + p.liveLinks.map(function (l) {
+                return '<a href="' + l.url + '" target="_blank" rel="noopener" class="drawer-store-btn">'
+                    + '<i class="fa-solid fa-arrow-up-right-from-square"></i> ' + l.label + '</a>';
+            }).join('')
+            + '</div>'
+            + '</div>';
+    }
+
     var respHtml = p.responsibilities.map(function (r) {
         return '<li>' + r + '</li>';
     }).join('');
@@ -464,6 +574,7 @@ function openDrawer(id) {
         +   '<h4 class="drawer-section-title"><i class="fa-solid fa-bullseye"></i> Project Overview</h4>'
         +   '<p>' + p.objective + '</p>'
         + '</div>'
+        + sitesHtml
         + '<div class="drawer-section">'
         +   '<h4 class="drawer-section-title"><i class="fa-solid fa-list-check"></i> Roles &amp; Responsibilities</h4>'
         +   '<ul class="drawer-list">' + respHtml + '</ul>'
@@ -490,6 +601,13 @@ function closeDrawer() {
    EXPERIENCE DATA & RENDER
    ============================================================ */
 var experienceData = [
+    {
+        company: 'Hexacode Tech',
+        role: 'Full Stack Developer',
+        date: 'Aug 2026 – Oct 2026',
+        type: 'work',
+        description: 'Built features across the PlayVault gaming platform, which runs 7 live casino brands and an operator portal: SwiftPay vendor integration, merchant balance sync from the payment middleware, player reconciliation, and in-house game fixes. Developed the PayCoinect Business payroll module with Philippine statutory deductions (SSS, PhilHealth, Pag-IBIG, BIR 2316), payslip APIs, and service-charge and SIL calculators. Also shipped wallet sync, business accounts, and send-money flows for PayCoinect, plus booking notifications for the PRAXYS corporate site.',
+    },
     {
         company: 'Surge Mobile Access Inc.',
         role: 'Full Stack Developer - Supervisor',
