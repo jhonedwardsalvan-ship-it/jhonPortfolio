@@ -73,7 +73,7 @@ function initSmoothScroll() {
    TYPEWRITER
    ============================================================ */
 function initTypewriter() {
-    var titles  = ['Full-Stack Developer', 'Web Application Engineer', 'API Integration Specialist'];
+    var titles  = ['Full-Stack Developer', 'AI Automation Builder', 'Web Application Engineer', 'API Integration Specialist'];
     var el      = document.getElementById('typewriter');
     var ti      = 0;
     var ci      = 0;
@@ -170,7 +170,13 @@ var skillsData = [
         icon: 'fa-solid fa-wrench',
         color: '#059669',
         category: 'Tools & Platforms',
-        skills: ['Git','Claude AI','Cursor', 'Jira', 'Figma', 'Postman', 'Draw.io', 'Slack', 'VS Code', 'n8n', 'Gohighlevel', 'Omada API', 'MultiChain DLT'],
+        skills: ['Git', 'Jira', 'Figma', 'Postman', 'Draw.io', 'Slack', 'VS Code', 'Omada API', 'MultiChain DLT'],
+    },
+    {
+        icon: 'fa-solid fa-robot',
+        color: '#db2777',
+        category: 'AI & Automation',
+        skills: ['AI Automation', 'Workflow Automation', 'n8n', 'GoHighLevel', 'Claude (Claude Code)', 'OpenAI Codex', 'Cursor', 'AI-Assisted Development', 'Prompt Engineering', 'LLM API Integration'],
     },
 ];
 

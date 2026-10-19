@@ -712,6 +712,10 @@ button { cursor: pointer; font-family: inherit; }
     gap: 24px;
 }
 
+.skill-card:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+}
+
 .skill-card {
     background: var(--bg-card);
     border: 1px solid var(--border);
